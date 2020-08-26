@@ -11,6 +11,8 @@ G00 X{$mop.first.X} Y{$mop.first.y}</Header>
 G01 F400.0 Z50
 {$cbfile.footer}
 M5
+G91
+G00 X-10 Y-10
 </Footer>
   <StartCut>M3</StartCut>
   <EndCut>M5</EndCut>
