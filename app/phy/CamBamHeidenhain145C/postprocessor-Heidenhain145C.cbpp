@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PostProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="0.9.8.0">
+  <PostFile>Loeschen
+{$header}
+{$mops}
+{$footer}</PostFile>
+  <Header>{$tooltable}</Header>
+  <Footer>{$clearance}
+STOP {$spindle(off)}
+</Footer>
+  <ToolTableItem>TOOL DEF {$tool.index} L{$tool.length} R{$tool.radius}</ToolTableItem>
+  <ToolChange>L Z35 R{$tool.radius} F9999 M
+TOOL CALL {$tool.index} Z {$s}
+STOP M00</ToolChange>
+  <MOP>{$toolchange}
+{$mop.header}
+{$blocks}
+{$mop.footer}
+{$clearance}</MOP>
+  <G0>L</G0>
+  <G1>L</G1>
+  <G2>CC</G2>
+  <G3>CC</G3>
+  <G81 />
+  <G82 />
+  <G83 />
+  <CutterCompOff />
+  <CutterCompLeft>L</CutterCompLeft>
+  <CutterCompRight>R</CutterCompRight>
+  <CannedCycleStart />
+  <CannedCycleEnd />
+  <UnitsMM>MM</UnitsMM>
+  <UnitsInches>INCH</UnitsInches>
+  <WorkplaneXY />
+  <WorkplaneXZ />
+  <WorkplaneYZ />
+  <VelocityModeExactStop />
+  <VelocityModeConstantVelocity />
+  <SpindleCW>M03</SpindleCW>
+  <SpindleCCW>M04</SpindleCCW>
+  <SpindleOff>M05</SpindleOff>
+  <Stop>M00</Stop>
+  <Rapid>L {$_x} {$_y} {$_z} R{$tool.radius} F9999 M</Rapid>
+  <FeedMove>L {$_x} {$_y} {$_z} R{$tool.radius} {$f} McprM{$spindle}</FeedMove>
+  <ArcCW>CC {$i} {$j}
+C {$x} {$y} {$_z} DR- R{$tool.radius} {$f} McprM{$spindle}</ArcCW>
+  <ArcCCW>CC {$i} {$j}
+C {$x} {$y} {$_z} DR+ R{$tool.radius} {$f} McprM{$spindle}</ArcCCW>
+  <Drill>L {$x} {$y} R{$tool.radius} F9999 M
+L Z{$rneg} R{$tool.radius} F9999 M
+CYCL DEF 1.0 PECKING
+CYCL DEF 1.1 SET UP {$r}
+CYCL DEF 1.2 DEPTH {$mop.targetdepth}
+CYCL DEF 1.3 PECKG {$mop.targetdepth}
+CYCL DEF 1.4 DWELL 0
+CYCL DEF 1.5 {$f}
+CYCL CALL {$spindle}</Drill>
+  <DrillDwell>L {$x} {$y} R{$tool.radius} F9999 M
+L Z{$rneg} R{$tool.radius} F9999 M
+CYCL DEF 1.0 PECKING
+CYCL DEF 1.1 SET UP {$r}
+CYCL DEF 1.2 DEPTH {$mop.targetdepth}
+CYCL DEF 1.3 PECKG {$mop.targetdepth}
+CYCL DEF 1.4 DWELL {$p}
+CYCL DEF 1.5 {$f}
+CYCL CALL {$spindle}</DrillDwell>
+  <DrillPeck>L {$x} {$y} R{$tool.radius} F9999 M
+L Z{$rneg} R{$tool.radius} F9999 M
+CYCL DEF 1.0 PECKING
+CYCL DEF 1.1 SET UP {$r}
+CYCL DEF 1.2 DEPTH {$mop.targetdepth}
+CYCL DEF 1.3 PECKG {$q}
+CYCL DEF 1.4 DWELL {$pabs}
+CYCL DEF 1.5 {$f}
+CYCL CALL {$spindle}</DrillPeck>
+  <Comment />
+  <EndComment />
+  <NumberFormat>0.###</NumberFormat>
+  <UpperCase>true</UpperCase>
+  <MinimumArcLength>0.05</MinimumArcLength>
+  <MaximumArcRadius>10000</MaximumArcRadius>
+  <DistanceAbsolute />
+  <DistanceIncremental>I</DistanceIncremental>
+  <ArcCenterMode>Absolute</ArcCenterMode>
+  <PostBuildCommand>wscript</PostBuildCommand>
+  <PostBuildCommandArgs>"C:\H-145-C_Post-Post_3.vbs" "{$outfile}"</PostBuildCommandArgs>
+  <SuppressParserErrors>true</SuppressParserErrors>
+</PostProcessor>
