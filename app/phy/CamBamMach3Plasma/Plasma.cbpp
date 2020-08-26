@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PostProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="0.9.8.0">
+  <PostFile>{$comment} Generiert mit CamBam {$endcomment}
+{$header}
+{$mops}
+{$footer}
+</PostFile>
+  <Header>G90
+G00 X{$mop.first.X} Y{$mop.first.y}</Header>
+  <Footer>
+G01 F400.0 Z50
+{$cbfile.footer}
+M5
+</Footer>
+  <StartCut>M3</StartCut>
+  <EndCut>M5</EndCut>
+  <ToolChange />
+  <MOP>
+{$mop.header}
+{$blocks}
+{$mop.footer}
+  </MOP>
+  <G0>G00</G0>
+  <G1>G01</G1>
+  <G2>G02</G2>
+  <G3>G03</G3>
+  <EndRewind />
+  <MinimumArcLength>0.0001</MinimumArcLength>
+  <MaximumArcRadius>10000</MaximumArcRadius>
+  <LineNumberFormat>0000</LineNumberFormat>
+</PostProcessor>
