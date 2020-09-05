@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PostProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="0.9.8.0">
-  <PostFile>{$comment} Generiert mit CamBam {$endcomment}
+  <PostFile>{$comment} Generiert mit CamBam at {$date} for {$part.name} from {$cbfile.name} {$endcomment}
 {$header}
 {$mops}
 {$footer}
@@ -8,16 +8,22 @@
   <Header>G90
 G00 X{$mop.first.X} Y{$mop.first.y}</Header>
   <Footer>
-G01 F400.0 Z50
 {$cbfile.footer}
 M5
+G01 F5000.0 Z50
 G91
 G00 X-10 Y-10
 </Footer>
-  <StartCut>M3</StartCut>
-  <EndCut>M5</EndCut>
+  <StartCut>G00 Z4
+M3
+G4 P0.6
+G00 Z{$mop.targetdepth}
+</StartCut>
+  <EndCut>
+M5</EndCut>
   <ToolChange />
   <MOP>
+{$comment} {$mop.name} {$endcomment}
 {$mop.header}
 {$blocks}
 {$mop.footer}

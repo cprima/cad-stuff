@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <CAMStyleLibrary Version="0.9.8.0">
 <CAMStyle Name="">
+<Style />
 <OptimisationMode state="Value">Experimental</OptimisationMode>
 <ToolDiameter state="Value">1.6</ToolDiameter>
 <PlungeFeedrate state="Value">400</PlungeFeedrate>
 <CutFeedrate state="Value">1000</CutFeedrate>
 <StockSurface state="Value">1.6</StockSurface>
-<ClearancePlane state="Value">10</ClearancePlane>
+<ClearancePlane state="Value">50</ClearancePlane>
 <TargetDepth state="Value">1.5</TargetDepth>
 <DepthIncrement state="Value">10</DepthIncrement>
 <InsideOutside state="Value">Inside</InsideOutside>
@@ -17,7 +18,7 @@
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
 <SpiralAngle>0</SpiralAngle>
-<TangentRadius>2</TangentRadius>
+<TangentRadius>3</TangentRadius>
 <LeadInFeedrate>0</LeadInFeedrate>
 </LeadInMove>
 <LeadOutMove state="Value">
@@ -30,146 +31,201 @@
 <YStepover state="Value">0.5</YStepover>
 <Resolution state="Value">0.2</Resolution>
 <BackFaceCulling state="Value">True</BackFaceCulling>
-<Style />
 </CAMStyle>
 <CAMStyle Name="01mm Blech Plasma">
+<Style />
 <CutFeedrate state="Value">6000</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>2</TangentRadius>
-<LeadInFeedrate>300</LeadInFeedrate>
-</LeadInMove>
-<Style />
-</CAMStyle>
-<CAMStyle Name="02mm Blech Plasma">
-<CutFeedrate state="Value">3500</CutFeedrate>
-<LeadInMove state="Value">
-<LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>2</TangentRadius>
-<LeadInFeedrate>300</LeadInFeedrate>
-</LeadInMove>
-<Style />
-</CAMStyle>
-<CAMStyle Name="03mm Blech Plasma">
-<CutFeedrate state="Value">3000</CutFeedrate>
-<LeadInMove state="Value">
-<LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
 <TangentRadius>3</TangentRadius>
 <LeadInFeedrate>300</LeadInFeedrate>
 </LeadInMove>
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>6000</LeadInFeedrate>
+</LeadOutMove>
+</CAMStyle>
+<CAMStyle Name="02mm Blech Plasma">
 <Style />
+<CutFeedrate state="Value">3500</CutFeedrate>
+<LeadInMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>3</TangentRadius>
+<LeadInFeedrate>300</LeadInFeedrate>
+</LeadInMove>
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>3500</LeadInFeedrate>
+</LeadOutMove>
+</CAMStyle>
+<CAMStyle Name="03mm Blech Plasma">
+<Style />
+<CutFeedrate state="Value">3000</CutFeedrate>
+<LeadInMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>3</TangentRadius>
+<LeadInFeedrate>300</LeadInFeedrate>
+</LeadInMove>
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>3000</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 <CAMStyle Name="04mm Blech Plasma">
+<Style />
 <CutFeedrate state="Value">1500</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>4</TangentRadius>
+<TangentRadius>3</TangentRadius>
 <LeadInFeedrate>300</LeadInFeedrate>
 </LeadInMove>
-<Style />
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>1500</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 <CAMStyle Name="05mm Blech Plasma">
+<Style />
 <CutFeedrate state="Value">1300</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>5</TangentRadius>
+<TangentRadius>3</TangentRadius>
 <LeadInFeedrate>300</LeadInFeedrate>
 </LeadInMove>
-<Style />
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>1300</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 <CAMStyle Name="06mm Blech Plasma">
+<Style />
 <CutFeedrate state="Value">1800</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>6</TangentRadius>
+<TangentRadius>3</TangentRadius>
 <LeadInFeedrate>250</LeadInFeedrate>
 </LeadInMove>
-<Style />
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>1300</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 <CAMStyle Name="08mm Blech Plasma">
+<Style />
 <CutFeedrate state="Value">1500</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>8</TangentRadius>
+<TangentRadius>3</TangentRadius>
 <LeadInFeedrate>250</LeadInFeedrate>
 </LeadInMove>
-<Style />
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>1500</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 <CAMStyle Name="10mm Blech Plasma">
-<CutFeedrate state="Value">1100</CutFeedrate>
+<Style />
+<CutFeedrate state="Value">650</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>10</TangentRadius>
+<TangentRadius>3</TangentRadius>
 <LeadInFeedrate>200</LeadInFeedrate>
 </LeadInMove>
-<Style />
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>650</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 <CAMStyle Name="12mm Blech Plasma">
+<Style />
 <CutFeedrate state="Value">1280</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>12</TangentRadius>
+<TangentRadius>3</TangentRadius>
 <LeadInFeedrate>200</LeadInFeedrate>
 </LeadInMove>
-<Style />
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>1280</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 <CAMStyle Name="16mm Blech Plasma">
+<Style />
 <CutFeedrate state="Value">870</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>15</TangentRadius>
+<TangentRadius>3</TangentRadius>
 <LeadInFeedrate>120</LeadInFeedrate>
 </LeadInMove>
-<Style />
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>870</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 <CAMStyle Name="18mm Blech Plasma">
+<Style />
 <CutFeedrate state="Value">400</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>15</TangentRadius>
+<TangentRadius>3</TangentRadius>
 <LeadInFeedrate>120</LeadInFeedrate>
 </LeadInMove>
-<Style />
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>400</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 <CAMStyle Name="20mm Blech Plasma">
+<Style />
 <CutFeedrate state="Value">570</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>15</TangentRadius>
-<LeadInFeedrate>0</LeadInFeedrate>
+<TangentRadius>3</TangentRadius>
+<LeadInFeedrate>99</LeadInFeedrate>
 </LeadInMove>
-<Style />
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>570</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 <CAMStyle Name="25mm Blech Plasma">
+<Style />
 <CutFeedrate state="Value">350</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>0</TangentRadius>
+<TangentRadius>3</TangentRadius>
 <LeadInFeedrate>99</LeadInFeedrate>
 </LeadInMove>
-<Style />
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>350</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 <CAMStyle Name="30mm Blech Plasma">
+<Style />
 <CutFeedrate state="Value">200</CutFeedrate>
 <LeadInMove state="Value">
 <LeadInType>Tangent</LeadInType>
-<SpiralAngle>0</SpiralAngle>
-<TangentRadius>0</TangentRadius>
-<LeadInFeedrate>0</LeadInFeedrate>
+<TangentRadius>3</TangentRadius>
+<LeadInFeedrate>99</LeadInFeedrate>
 </LeadInMove>
-<Style />
+<LeadOutMove state="Value">
+<LeadInType>Tangent</LeadInType>
+<TangentRadius>2</TangentRadius>
+<LeadInFeedrate>99</LeadInFeedrate>
+</LeadOutMove>
 </CAMStyle>
 </CAMStyleLibrary>
